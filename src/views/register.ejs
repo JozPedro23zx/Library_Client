@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Biblioteca Regional</title>
+
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/userLog.css">
+    <link rel="stylesheet" href="/styles/responsive.css">
+
+</head>
+<body id="userLogin">
+    <div class="content">
+        <div class="returnHome">
+            <a href="/login"></a>
+        </div>
+        
+
+        <div id="contentLogin">
+            <div>
+                <img src="/Images/book.png">
+            </div>
+    
+            <div id="login" class="login register">
+                <%if(mistake){%>
+                    <div class="messageError"><p><%= mistake %></p></div>
+                <% } %>
+                <form action="http://localhost:8000/register" method="POST">
+    
+                    <input type="text" id="nameUser" name="nameUser" placeholder="Digite seu Nome">
+                    <input type="email" id="email" name="email" placeholder="Digite seu Email">
+                    <input type="password" id="password" name="password" placeholder="Crie uma Senha">
+                    <input type="password" id="passwordRepeat" name="passwordRepeat" placeholder="Repita sua Senha">
+                    
+                    <input type="date" id="birthday" name="birthday" value="2021-01-01" min="1900-01-01" max="2021-0101">
+                    
+                    <select id="city" name="city">
+                        <option value="Default">Selecione sua cidade</option>
+                        <option value="Juazeiro do Norte">Juazeiro do Norte</option>
+                        <option value="Barbalha">Barbalha</option>
+                        <option value="Milagres">Milagres</option>
+                        <option value="Missão Velha">Missão Velha</option>
+                    </select>
+                    
+                    <br>
+    
+                    <button type="submit" name="button">Cadastrar</button>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+
+    
+
+</body>
+</html>

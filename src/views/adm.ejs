@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Página administrativa</title>
+        
+        <!-- <link rel="stylesheet" href="/styles/global.css">
+        <link rel="stylesheet" href="/styles/<%= page %>.css"> -->
+    </head>
+    <body style="font-size: large;">
+        <div>
+            <h3><a href="/admin">Adicionar biblioteca</a></h3>
+            <h3><a href="/admin/registerBook">Adicionar livro</a></h3>
+            <h3><a href="/admin/registerGroup">Adicionar Grupo</a></h3>
+        </div>
+        <div style="margin-left: 20px;">
+            <%- include(`adminParts/${page}`)%>
+        </div>
+    </body>
+</html>

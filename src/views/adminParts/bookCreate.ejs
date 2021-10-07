@@ -1,0 +1,37 @@
+<h2>Registrar novo livro</h2>
+<form action="http://localhost:8000/createBook" method="POST">
+    <p>Título:</p>
+    <input type="text" id="title" name="title">
+    <p>Autor:</p>
+    <input type="text" id="author" name="author">
+    <p>Sinopse:</p>
+    <textarea id="sinopse" name="sinopse"></textarea>
+    <p>Quantidade</p>
+    <input type="number" id="qantity" name="quantity">
+    
+    <p>Grupo:</p>
+    <select id="group" name="group">
+        <option value="none">Nenhum</option>
+        <% collection.forEach(saga =>{%>
+        <option value="<%= saga.name %>"><%= saga.name %></option>
+        <% }) %>
+    </select>
+
+    <p>Volume/ordem/sequencia:</p>
+    <input type="number" id="sequence" name="sequence">
+
+    <p>Gêneros:</p>
+    <input type="text" id="genres" name="genres">
+
+    <p>Id da biblioteca</p>
+    <input type="number" name="oneLibrary" id="oneLibrary" placeholder="id">
+
+    <br>
+
+    <input type="checkbox" name="allLibrary" id="allLibrary" value="check">
+    <label for="allLibrary">Adicionar em todas</label>
+    
+
+    <br><br>
+    <button style="padding: 10px;" type="submit" name="button">Criar</button>
+</form>

@@ -1,0 +1,45 @@
+    <main>
+        <section id="bookView">
+            <%if(mistake){%>
+                <div class="messageError"><p><%= mistake %></p></div>
+            <% } %>
+            <div class="bookContent">
+                <div class="bookChosen">
+                    <img src="/Images/<%= bookInfo.cover %>.jpg">
+                    <p>Quantidade: <%= bookInfo.quantity %></p>
+                    <div class="bookButtons">
+                        <a href="/confirm/give/<%= bookInfo.id %>">Pegar</a>
+                        <a href="/confirm/giveBack/<%= bookInfo.id %>">Devolver</a>
+                    </div>
+                </div>
+                
+                <div class="bookInfo">
+                        <div class="allInfo">
+                            <p><strong>Titulo: </strong><%= bookInfo.title %></p>
+                            <p><strong>Escrito por: </strong><%= bookInfo.author %></p>
+                            <p><strong>Sinopse:</strong></p>
+                            <p><%= bookInfo.sinopse %></p>
+                        </div>
+                        <div class="genres">
+                            <% tagsBook.forEach(tag =>{ %>
+                            <div class="genre">
+                                <p><%= tag.genre %></p>
+                            </div>
+                            <% }) %>
+                        </div>
+                </div>
+            </div>
+                
+            </section>
+
+            <section id="booksRecommended">
+                <h2>Recomendados:</h2>
+                <div class="listRecommended">
+                    <% bookList.forEach(book => { %>
+                    <div class="recommend">
+                        <a href="/book/<%= book.id %>"><img src="/Images/<%= book.cover %>.jpg"></a>
+                    </div>
+                    <% }) %>
+                </div>
+            </section>
+        </main>

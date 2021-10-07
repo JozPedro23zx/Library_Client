@@ -1,0 +1,70 @@
+    <main>
+        <section id="banner">
+            <img src="/Images/banner.jpg" alt="Banner">
+            <div class="bannerMessage">
+                <h1>Bem vindo à Biblioteca Regional!</h1>
+                <p>Você pode encontrar todos os livros que deseja ler aqui. Ajude-nos também doando livros que você não usa mais, a contribuição de todos é necessária. </p>
+            </div>
+        </section>
+        
+        <section id="newsBooks">
+            <h2>Novos livros adicionados</h2>
+            <div class="listBooks">
+                <% bookInfo.forEach(book =>{ %>
+                <div class="book">
+                    <a href="/book/<%= book.id%>"><img src="/Images/<%= book.cover %>.jpg"></a>
+                    <p><%= book.title %></p>
+                </div>
+                <% }) %>
+            </div>
+        </section>
+
+
+        <section id="popularBooks">
+            <h2>Mais populares</h2>
+            <div class="listBooks">
+            <% sortedCollection.forEach(collection =>{ %>
+                <div class="saga">
+                    <a href="getGroupBook/<%= collection.id %>">
+                        <div><img src="/Images/<%= collection.cover %>.jpg"></div>
+                        <p>Veja a coleção <br>completa de <br><%= collection.name %></p>
+                    </a>
+                </div>
+            <% }) %>
+            </div>
+        </section>
+
+        <section id="contact">
+            
+                <div class="logo">
+                    <h1>Entre em contato conosco</h1>
+                    <img src="/Images/logo.png">
+                </div>
+
+                <div class="infos">
+                    <p><strong>Email:</strong> email@email.email</p>
+                    <p><strong>WhatsApp:</strong> 09324329058</p>
+                    <p><strong>Telefone:</strong> 98347284732</p>
+                </div>
+
+                <div class="socialLink">
+                    <a href="#">
+                        <img src="/Images/facebook.png">
+                    </a>
+                    <a href="#">
+                        <img src="/Images/Instagram.png">
+                    </a>
+                    <a href="#">
+                        <img src="/Images/twitter.png">
+                    </a>
+                </div>
+            
+        </section>
+
+        <section id="rodape">
+            <div class="rodapeInfo">
+                <p>© Todos os direitos reservados e blablabla</p>
+                <p>Biblioteca Regional</p>
+            </div>
+        </section>
+    </main>

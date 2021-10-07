@@ -1,0 +1,12 @@
+        <main>
+           <section id="allSection">
+                <div class="booksList">
+                    <% list.forEach(book =>{ %>
+                    <div class="book">
+                        <a href="/book/<%= book.id %>"><img src="/Images/<%= book.cover %>.jpg"></a>
+                        <p><%= book.title %></p>
+                    </div>
+                    <% }) %>
+                </div>
+           </section>
+        </main>

@@ -1,0 +1,115 @@
+<main>
+    <section id="perfil">
+            
+        <div class="topic">
+                <div class="direct">
+                    <a href="#informations">Informações</a>
+                    <a href="#editProfile">Editar Perfil</a>
+                    <a href="#privacy">Privacidade</a>
+                    <a href="#historic">Histórico</a>
+                    <a href="/logout" class="danger">Sair</a> 
+                </div>
+        </div>
+
+        <div class="perfilInfo">
+                <div id="informations" class="informations">
+                    <h1>Informações da Conta</h1>
+                    
+                    <div class="userAndBook">
+                        <div class="details">
+                            <p>Nome:     <%= fullName %></p>
+                            <p>Email:    <%= email %></p>
+                            <p>Idade:    <%= age %></p>
+                            <p>Cidade:    <%= location %></p>
+                        </div>
+    
+                        <div class="atualBook">
+                            <% if(atualBook){ %>
+                                <img src="/Images/<%= atualBook[2] %>.jpg">
+                                <div>
+                                    <p>Livro atual:</p>
+                                    <p><%= atualBook[1] %></p>
+                                    <br>
+                                    <p>Pegou: <%= atualBook[3]%></p>
+                                    <p>Entregar: <%= atualBook[4]%></p>
+                                    <a href="/book/<%= atualBook[0] %>">Ver mais</a>
+                                </div>
+                            <% } else {%>
+                                <h2>Não está em posse de nenhum livro</h2>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <div id="editProfile" class="editProfile">
+                    <h1>Editar perfil</h1>
+                    <% if(message){ %>
+                        <div class="messageError"><h2>Erro ao modificar dados</h2></div>
+                    <% } %>
+                    <form class="<%= id %>">
+                        
+                        <label for="nameUser">Nome:</label>
+                        <input id="nameUser" name="nameUser" type="text" placeholder="Novo nome">
+
+                        <label for="email">Email:</label>
+                        <input id="email" name="email" type="email" placeholder="Novo email">
+
+                        <label for="password">Senha:</label>
+                        <input id="password" name="password" type="password" placeholder="Nova senha">
+
+                        <label for="location">Cidade</label>
+                        <select id="location" name="location">
+                            <option value="<%= location %>" selected><%= location %>(Atual)</option>  
+                            <% libraries.forEach(library =>{%>
+                            <option value="<%= library %>"><%= library %></option>
+                            <% }) %>
+                        </select>
+                        
+                        <button name="sendButton" class="sendButton" type="button">Editar</button>
+                    </form>
+                </div>
+
+                
+
+                <div id="privacy" class="privacy">
+                    <h1>Privacidade</h1>
+                    <p>Para saber mais sobre a nossa política de privacidade, por favor leia nosso <a href="">Termos de uso</a>.</p>
+                    <p>Nós utilizamos o sistema de localização automática. Você pode desativá-lo a qualquer momento <a href="#">clicando aqui</a>.</p>
+                    <p>Veja nossas dicas para mater suas informações mais seguiras <a>clicando aqui</a>.</p>
+                </div>
+
+                
+
+                <div id="historic" class="historic">
+                    <h1>Histórico</h1>
+                    <% if(booksList){ %>
+                        <div class="historicList">
+                            <% booksList.forEach(book => { %>
+                            <div class="historicBook">
+                                <img src="/Images/<%= book[1] %>.jpg">
+                                <p><%= book[2]%></p>
+                            </div>
+                            <% }) %>
+                        </div>
+                    <% } %>
+                </div>
+        </div>
+    </section>
+
+        <!-- Check script in public folder -->
+        <section class="modal-wrapper">
+            <div class="modal">
+                <h2>Digite sua senha para prosseguir</h2>
+                <form action="#" method="POST">
+                    <input type="password" id="checkPassowrd" name="checkPassword">
+
+                    <div class="buttons">
+                        <div class="editCancel">Cancelar</div>
+                        <button class="editConfirm" type="submit">Confirmar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+</main>

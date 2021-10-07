@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><% let title = method == "give" ? "Pegar" : "Devolver" %></title>
+    
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/<%= page %>.css">
+    <link rel="stylesheet" href="/styles/responsive.css">
+
+</head>
+<body>
+    <div class="content">
+
+        <div id="messageLent">
+            <% if(method == "give"){ %>
+                <h1>Você está prestes a pegar este livro emprestado </h1>
+                <p>Ao clicar em confirmar, você estará concordando com o contrato estabelecido pela Biblioteca Regional. Deseja continuar?</p>
+                <a href="#" class="terms">Termos de uso</a>
+            <% }else{ %>
+                <h1>Você está devolvendo o livro para a biblioteca. Deseja continuar</h1>
+            <% } %>
+                <div class="confirmButtons">
+                    <a class="cancel" href="/book/<%= idBook %>">Voltar</a>
+                    <a class="confirm" href="http://localhost:8000/registerHistoric/<%= method %>/<%= idUser %>/<%= idBook %>">Confirmar</a>
+                </div>
+        </div>
+    </div>
+</body>
+</html>

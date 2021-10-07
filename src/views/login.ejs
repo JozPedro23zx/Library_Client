@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Biblioteca Regional</title>
+
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/userLog.css">
+    <link rel="stylesheet" href="/styles/responsive.css">
+
+</head>
+<body>
+    <div class="returnHome">
+        <a href="/"></a>
+    </div>
+
+    <div id="login" class="login">
+        <%if(mistake){%>
+            <div class="messageError"><p><%= mistake %></p></div>
+        <% } %>
+        <form action="/loginAuthentication" method="POST">
+            <input type="email" id="email" name="email" placeholder="Digite seu Email">
+            <input type="password" id="password" name="password" placeholder="Digite sua Senha"><br>
+            <button type="submit" name="button">Entrar</button>
+        </form>
+
+        <p>Não possui uma conta?<a href="/register"> Cadastre-se agora</a>.</p>
+    </div>
+</body>
+</html>

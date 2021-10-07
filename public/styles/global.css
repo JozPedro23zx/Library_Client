@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.content{
+    width: 100%;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    display: flex;
+    height: 100vg;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+a{
+    color: #fff;
+}
+
+header{
+    border-bottom: solid .1rem black;
+    background-color: #080a1d;
+}
+
+header .navBarr{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2rem;
+}
+
+header .buttons{
+    padding: 1rem;
+    border: solid .1rem transparent;
+    background-color: #ff8000;
+    color: white;
+    border-radius: 1rem;
+}
+
+header .navBarr .booksDirectory{
+    display: flex;
+}
+
+header .navBarr .booksDirectory a:nth-child(1){
+    margin-right: 8rem; 
+    margin-left: 2rem;
+}
+
+header .searchBook{
+    border: solid .1rem black;
+    border-radius: 1rem;
+    background-color: #ff8000;
+    margin-left: 1.5rem;
+}
+
+header .searchBook input{
+    font-size: 2rem;
+    padding: 1rem;
+    width: 40rem;
+    border-radius: 1rem;
+}
+
+header .searchBook button{
+    font-size: 1.8rem;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    padding: .8rem;
+    cursor: pointer;
+}
+
+header .userIcon{
+    display: none;
+}
+
+header .userInfo a{
+    font-size: 2.3rem;
+}
+
+header .userIcon a, .userInfo a{
+    margin-right: 2rem;
+}
+
+
+header .userIcon .profileIcon{
+    padding: 3rem 3rem 3rem 3rem;
+    border-radius: 3rem;
+
+    background: url('/images/profileIcon.png') no-repeat top/contain #ff8000;
+}
+
+header .userIcon .loginIcon{
+    padding: 3rem 3rem 3rem 3rem;
+    border-radius: 3rem;
+
+    background: url('/images/loginIcon.png') no-repeat center/80% #ff8000;
+    
+}
+
+.messageError{
+    color: rgb(158, 25, 25);
+    margin-top: -4rem;
+    padding: 1rem;
+}

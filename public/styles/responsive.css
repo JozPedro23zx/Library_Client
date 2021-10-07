@@ -1,0 +1,384 @@
+
+@media (max-width: 1400px){
+    html{
+        font-size: 51%;
+    }
+}
+
+@media (max-width: 930px){
+    html{
+        font-size: 43%;
+    }
+
+    /* Home Page */
+
+    #banner .bannerMessage{
+        left: 10%;
+        width: 80%;
+    }
+
+    #banner .bannerMessage h1{
+        font-size: 5rem;
+    }
+
+    #banner .bannerMessage p{
+        font-size: 2rem;
+    }
+
+    #newsBooks{
+        overflow: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    #popularBooks{
+        overflow: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+
+
+    /* Book Search */
+
+    #allSection .booksList .book{
+        width: 25%;
+    }
+
+    #allSection .booksList .book img{
+        width: 13rem;
+        height: 17rem;
+    }
+
+    #allSection .booksList .book p{
+        font-size: 1.4rem;
+    }
+
+
+    /* Book Info */
+    main{
+        display: inline;
+    }
+
+    #bookView{
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #booksRecommended{
+        width: 100%;
+        margin-right: 0;
+
+        font-size: 1.9rem;
+        text-align: left;
+        line-height: 10rem;
+    }
+
+    #booksRecommended .listRecommended{
+        display: flex;
+        justify-content: space-between;
+        overflow: scroll;
+        overflow-y: hidden;
+    }
+
+    #booksRecommended .recommend{
+        width: 19rem;
+        height: 25rem;
+        
+        margin-left: 4rem;
+    }
+
+    #booksRecommended .recommend img{
+        width: 19rem;
+        height: 25rem;
+    }
+
+
+
+    /* Login */
+
+
+    .returnHome a{
+        padding: 2rem 4rem 2rem 4rem;
+    }
+
+    .login{
+        width: 60%;
+        height: 30rem;
+
+        padding-top: 4rem;
+
+        margin-top: 2rem;
+        margin-left: 15%;
+
+        line-height: 2rem;
+    }
+
+    .login input, .login button{
+        font-size: 2.2rem;
+        padding: 1rem;
+    }
+    
+    .login p{
+        font-size: 1.9rem;
+    }
+
+    #contentLogin img{
+        visibility: hidden;
+    }
+
+    .login.register{
+        height: 33rem;
+        margin-top: -7rem;
+        width: 85%;
+    }
+
+
+
+    /* Perfil */
+
+    #perfil{
+        display: inline;
+        margin-left: 5%;
+
+        border: none;
+    }
+    
+    #perfil .topic{
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    #perfil .direct{
+        display: flex;
+        position: relative;
+
+        line-height: normal;
+        justify-content: space-between;
+    }
+
+    #perfil .topic a{        
+        font-size: 2rem;
+        background-color: #000;
+        color: #fff;
+
+        padding: .8rem;
+        border-radius: 1.4rem;
+    }   
+    
+    #perfil .topic .danger{
+        color: #fff;
+        background-color: red;
+    }
+
+    #perfil .perfilInfo .informations .userAndBook{
+        display: grid;
+    }
+}
+
+
+
+
+
+@media (max-width: 500px){
+    html{
+        font-size: 30%;
+    }
+
+
+
+    /* Header */
+
+    header{
+        height: 12rem;
+    }
+
+    header .searchBook input{
+        font-size: 1.4em;
+    }
+
+    header .searchBook button{
+        font-size: 2.4rem;
+    }
+
+    header .userInfo{
+        display: none;
+    }
+
+    header .userIcon{
+        display:contents;
+    }
+
+    /* Book Search */
+
+    #allSection .booksList .book{
+        width: 33.3%;
+    }
+
+
+
+
+    /* Book Info */
+    
+    #bookView{
+        width: 100%;
+        height: auto;
+        background-color: #fff;
+        
+        padding: 0;
+        
+        display: inline;
+    }
+    
+    #bookView .messageError{
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    #bookView .bookContent{
+        display: grid;
+    }
+    
+    #bookView .bookChosen{
+        width: 100%;
+        font-size: 3.5rem;
+        margin-bottom: 5rem;
+    }
+
+    #bookView .bookChosen img{
+        width: 70%;
+        height: 70rem;
+    }
+
+    #bookView .bookChosen .bookButtons{
+        width: 70%;
+        margin-left: 15%;
+    }
+
+    #bookView .bookChosen .bookButtons a{
+        padding: 1.4rem;
+        width: 20rem;
+    }
+
+
+
+    #bookView .bookInfo{
+        width: 100%;
+        height: auto;
+        margin-bottom: 5rem;
+
+    }
+
+    #bookView .bookInfo .allInfo{
+        font-size: 3.5rem;
+        line-height: 5.5rem;
+    }
+
+    #bookView .bookInfo .allInfo p:nth-child(4){
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+
+    #bookView .bookInfo .genres{
+        font-size: 2.7rem;
+    }
+
+
+    #booksRecommended .recommend{
+        width: 22rem;
+        height: 28rem;
+        
+        margin-left: 4rem;
+    }
+
+    #booksRecommended .recommend img{
+        width: 22rem;
+        height: 28rem;
+    }
+
+    /* Login */
+
+    #userLogin .content{
+        overflow: hidden;
+    }
+
+    .returnHome a{
+        padding: 2.5rem 4.5rem 2.5rem 4.5rem;
+    }
+
+    .login{
+        width: 70%;
+        height: 50rem;
+
+        margin-top: 20rem;
+        margin-left: 10%;
+
+        padding-top: 8rem;
+
+        line-height: 7rem;
+    }
+
+    .login input, .login button{
+        font-size: 3rem;
+        padding: 1.4rem;
+    }
+
+    .login p{
+        font-size: 2.2rem;
+    }
+
+    #contentLogin img{
+        visibility: visible;
+    }
+
+    .login.register{
+        height: 70rem;
+        margin-top: 10rem;
+        width: 70%;
+    }
+
+
+
+    /* Perfil */
+
+
+    /* #perfil{
+        display: inline;
+        margin-left: 5%;
+
+        border: none;
+    }
+    
+    #perfil .topic{
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    #perfil .direct{
+        display: flex;
+        position: relative;
+
+        line-height: normal;
+        justify-content: space-between;
+    }
+
+    #perfil .topic a{        
+        font-size: 2rem;
+        background-color: #000;
+        color: #fff;
+
+        padding: .8rem;
+        border-radius: 1.4rem;
+    }   
+    
+    #perfil .topic .danger{
+        color: #fff;
+        background-color: red;
+    }
+
+    #perfil .perfilInfo .informations .userAndBook{
+        display: grid;
+    } */
+}

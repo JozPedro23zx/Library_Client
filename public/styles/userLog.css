@@ -1,0 +1,112 @@
+html{
+    height: 100%;
+}
+
+body{
+    background: linear-gradient(#424949 5%, #17202A 95%);
+    height: 100%;
+
+    overflow: hidden;
+}
+
+.returnHome{
+    /* left: 0; */
+
+    margin-top: 4rem;
+    margin-left: 3%;
+
+    align-items: center;
+
+    height: 4.5rem;
+    width: 3.5%;
+    
+}
+
+.returnHome a{
+    padding: 1.5rem 3.5rem 1.5rem 3.5rem;
+
+    background: url('/images/back.png') no-repeat top/contain #ff8000;
+}
+
+.login{
+    border-radius: 5rem;
+    background-color: rgba(201, 201, 201, 0.4);
+
+    width: 25%;
+    height: 50%;
+
+    margin-top: 10rem;
+    margin-left: 31.5%;
+
+    padding-top: 8rem;
+    text-align: center;
+}
+
+#contentLogin img{
+    margin-top: 10rem;
+
+    filter: brightness(35%);
+
+    width: 85rem;
+    height: 75rem;
+
+    float: left;
+}
+
+.login.register{
+    border-radius: 5rem 0 0 5rem;
+
+    margin-top: 5rem;
+
+    height: 60rem;
+    position: absolute;
+
+    right: 0;
+}
+
+.login.register select{
+    border: solid .1rem #ABA996;
+    border-radius: .5rem;
+
+    margin-bottom: 2.5rem;
+    font-size: 1.9rem;
+
+    padding: .5rem;
+}
+
+.login input{
+    border: solid .1rem #ABA996;
+    border-radius: .5rem;
+
+    margin-bottom: 2.5rem;
+    font-size: 2.5rem;
+
+    padding: 1rem;
+}
+
+.login button{
+    font-size: 2.5rem;
+    font-weight: 700;
+
+    border-radius: 1rem;
+
+    background-color: #d36c05;
+    color: #fff;
+
+    border: solid #ABA996 .1rem;
+
+    width: 20rem;
+    padding: .5rem;
+
+    margin-bottom: 2.5rem;
+}
+
+.login p{
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.login a{
+    color: #fff;
+}
+

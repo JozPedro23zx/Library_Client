@@ -1,0 +1,42 @@
+#allSection{
+    justify-content: center;
+}
+
+.booksList{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 3.4rem;
+    padding: 1rem;
+    padding-top: 2rem;
+
+    display: flex;
+    flex-flow: wrap;
+
+    background-color: #EAFBFB;
+    border-radius: 1rem;
+}
+
+.booksList .book{
+    width: 20%;
+    padding-top: 1rem;
+    /* margin-left: 1.5rem; maior a tela, menor o espaço */
+    
+    margin-bottom: 3rem;
+    text-align: center;
+    transition: filter 1.2s;
+}
+
+.booksList .book:hover{
+    filter: brightness(1.5);
+}
+
+
+.booksList .book img{
+    width: 18rem;
+    height: 22rem;
+}
+
+.booksList .book p{
+    font-size: 1.6rem;
+    word-break: break-word;
+}
