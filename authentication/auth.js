@@ -1,20 +1,16 @@
 const LocalStrategy = require('passport-local').Strategy
 const fetch = require('node-fetch')
-var response
 
 module.exports = function(passport){
     passport.use(new LocalStrategy({usernameField: 'email'},
         async function(userEmail, password, done){
-            await fetch(`http://localhost:8000/login/:${userEmail}/:${password}`, {
-                method: "GET"
-            }).then(res => res.json()).then(json => response = json)
+            let response = await fetch(`http://localhost:8000/login/:${userEmail}/:${password}`)
+            const user = response.json()
 
-            const user = response.userData
-
-            if(user == false){
+            if(user.data == false){
                 return done(null, false, {message: "Email e senha não correspondem"})
             }else{
-                return done(null, user)
+                return done(null, user.data)
             }
         }
     ));
