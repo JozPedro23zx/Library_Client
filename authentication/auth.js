@@ -5,7 +5,9 @@ module.exports = function(passport){
     passport.use(new LocalStrategy({usernameField: 'email'},
         async function(userEmail, password, done){
             let response = await fetch(`http://localhost:8000/login/:${userEmail}/:${password}`)
-            const user = response.json()
+            const user = await response.json()
+
+            console.log(user.data)
 
             if(user.data == false){
                 return done(null, false, {message: "Email e senha não correspondem"})
