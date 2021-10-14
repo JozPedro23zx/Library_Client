@@ -1,5 +1,5 @@
 <h2>Registrar novo livro</h2>
-<form action="http://localhost:8000/createBook" method="POST">
+<form action="${process.env.API_HOST}/createBook" method="POST">
     <p>Título:</p>
     <input type="text" id="title" name="title">
     <p>Autor:</p>

@@ -7,7 +7,7 @@ class GetBookController{
         let user = req.user || null
         let library = await selectLibraryLocation(user)
         try{
-            let response = await fetch(`http://localhost:8000/${library}/${group}/listBookForGroup`)
+            let response = await fetch(`${process.env.API_HOST}/${library}/${group}/listBookForGroup`)
             let listBooks = await response.json()
     
             res.render("index", {page: 'booksList', list: listBooks.collectionList, user})
@@ -22,7 +22,7 @@ class GetBookController{
         let user = req.user || null
         let library = await selectLibraryLocation(user)
         try{
-            let response = await fetch(`http://localhost:8000/${library}/listBook/:${search}`)
+            let response = await fetch(`${process.env.API_HOST}/${library}/listBook/:${search}`)
             let searchResult = await response.json()
 
             res.render("index", {page: 'booksList', list: searchResult.book, user})

@@ -8,10 +8,10 @@ class ViewerBooksController{
         let library = await selectLibraryLocation(user)
         
         try{
-            let response = await fetch(`http://localhost:8000/${library}/listBook`)
+            let response = await fetch(`${process.env.API_HOST}/${library}/listBook`)
             let listBook = await response.json()
 
-            let response2 = await fetch(`http://localhost:8000/popularBooks`)
+            let response2 = await fetch(`${process.env.API_HOST}/popularBooks`)
             let popularBooks = await response2.json()
 
 
@@ -35,7 +35,7 @@ class ViewerBooksController{
 
         try{
             
-            let response = await fetch(`http://localhost:8000/${library}/getBook/${idBook}`)
+            let response = await fetch(`${process.env.API_HOST}/${library}/getBook/${idBook}`)
             let bookData = await response.json()
 
             res.render("index", {page: 'bookPage', bookInfo: bookData.book, tagsBook: bookData.tags, bookList: bookData.recommendation, mistake: req.flash("message") ,user})

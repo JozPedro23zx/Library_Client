@@ -18,7 +18,7 @@ function screenModal(){
 
     const form = document.querySelector('.modal form')
     
-    form.setAttribute('action', `http://localhost:8000/edit/${id}/${name}/${email}/${password}/${location}`)
+    form.setAttribute('action', `${process.env.API_HOST}/edit/${id}/${name}/${email}/${password}/${location}`)
 
     modal.open()
 }

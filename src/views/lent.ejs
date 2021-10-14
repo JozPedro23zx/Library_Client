@@ -24,7 +24,7 @@
             <% } %>
                 <div class="confirmButtons">
                     <a class="cancel" href="/book/<%= idBook %>">Voltar</a>
-                    <a class="confirm" href="http://localhost:8000/registerHistoric/<%= method %>/<%= idUser %>/<%= idBook %>">Confirmar</a>
+                    <a class="confirm" href="${process.env.API_HOST}/registerHistoric/<%= method %>/<%= idUser %>/<%= idBook %>">Confirmar</a>
                 </div>
         </div>
     </div>

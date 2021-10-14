@@ -6,13 +6,13 @@ class GetUserController{
         let user = req.user || null
         let id = req.params.id
         try{
-            let response = await fetch(`http://localhost:8000/getPerfil/${id}`)
+            let response = await fetch(`${process.env.API_HOST}/getPerfil/${id}`)
             let userData = await response.json()
 
-            let response2 = await fetch(`http://localhost:8000/getHistoricBook/${id}`)
+            let response2 = await fetch(`${process.env.API_HOST}/getHistoricBook/${id}`)
             let history = await response2.json()
 
-            let response3 = await fetch(`http://localhost:8000/getAllLibraries`)
+            let response3 = await fetch(`${process.env.API_HOST}/getAllLibraries`)
             let libraries = await response3.json()
             
             var fullName = userData.user.name

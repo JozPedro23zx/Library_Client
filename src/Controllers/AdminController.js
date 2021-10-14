@@ -5,7 +5,7 @@ var saga
 class AdminController{
     async addBook(req, res){
         try{
-            await fetch(`http://localhost:8000/popularBooks`, {
+            await fetch(`${process.env.API_HOST}/popularBooks`, {
                 method: "GET"
             }).then(res => res.json()).then(json => saga = json)
 

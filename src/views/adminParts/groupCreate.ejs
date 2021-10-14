@@ -1,5 +1,5 @@
 <h2>Registrar nova coleção</h2>
-<form action="http://localhost:8000/createGroup" method="POST">
+<form action="${process.env.API_HOST}/createGroup" method="POST">
     <p>Nome:</p>
     <input type="text" id="title" name="title">
 
