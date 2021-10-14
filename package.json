@@ -9,6 +9,7 @@
   "keywords": [],
   "author": "José Pedro",
   "license": "ISC",
+  "engines" : { "node" : ">=16.8.0" },
   "dependencies": {
     "connect-flash": "^0.1.1",
     "dotenv": "^10.0.0",
