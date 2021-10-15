@@ -7,8 +7,6 @@ const flash = require('connect-flash');
 const admin = require('./admin')
 const route = require('./routes')
 
-
-
 const app = express();
 
 const passport = require("passport")

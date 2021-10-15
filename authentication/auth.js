@@ -7,8 +7,6 @@ module.exports = function(passport){
             let response = await fetch(`${process.env.API_HOST}/login/:${userEmail}/:${password}`)
             const user = await response.json()
 
-            console.log(user.data)
-
             if(user.data == false){
                 return done(null, false, {message: "Email e senha não correspondem"})
             }else{
