@@ -10,12 +10,14 @@
         <section id="newsBooks">
             <h2>Novos livros adicionados</h2>
             <div class="listBooks">
-                <% bookInfo.forEach(book =>{ %>
-                <div class="book">
-                    <a href="/book/<%= book.id%>"><img src="/Images/<%= book.cover %>.jpg"></a>
-                    <p><%= book.title %></p>
-                </div>
-                <% }) %>
+                <% if(sortedCollection){ %>
+                    <% bookInfo.forEach(book =>{ %>
+                    <div class="book">
+                        <a href="/book/<%= book.id%>"><img src="/Images/<%= book.cover %>.jpg"></a>
+                        <p><%= book.title %></p>
+                    </div>
+                    <% }) %>
+                <% } %>
             </div>
         </section>
 
@@ -23,14 +25,16 @@
         <section id="popularBooks">
             <h2>Mais populares</h2>
             <div class="listBooks">
-            <% sortedCollection.forEach(collection =>{ %>
-                <div class="saga">
-                    <a href="getGroupBook/<%= collection.id %>">
-                        <div><img src="/Images/<%= collection.cover %>.jpg"></div>
-                        <p>Veja a coleção <br>completa de <br><%= collection.name %></p>
-                    </a>
-                </div>
-            <% }) %>
+            <% if(sortedCollection){ %>
+                <% sortedCollection.forEach(collection =>{ %>
+                    <div class="saga">
+                        <a href="getGroupBook/<%= collection.id %>">
+                            <div><img src="/Images/<%= collection.cover %>.jpg"></div>
+                            <p>Veja a coleção <br>completa de <br><%= collection.name %></p>
+                        </a>
+                    </div>
+                <% }) %>
+            <% } %>
             </div>
         </section>
 

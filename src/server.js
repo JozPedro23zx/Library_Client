@@ -37,5 +37,5 @@ app.use(admin)
 
 let port = process.env.PORT
 app.listen(port, ()=>{
-    console.log(`Server is running in port ${port}`)
+    console.log(process.env.API_HOST)
 })
