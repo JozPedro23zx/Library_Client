@@ -25,7 +25,7 @@
     
                         <div class="atualBook">
                             <% if(atualBook){ %>
-                                <img src="/Images/<%= atualBook[2] %>.jpg">
+                                <img src="https://res.cloudinary.com/dhuy2dkhc/image/upload/v1634407010/libraryImages/<%= atualBook[2] %>.jpg">
                                 <div>
                                     <p>Livro atual:</p>
                                     <p><%= atualBook[1] %></p>
@@ -88,7 +88,7 @@
                         <div class="historicList">
                             <% booksList.forEach(book => { %>
                             <div class="historicBook">
-                                <img src="/Images/<%= book[1] %>.jpg">
+                                <img src="https://res.cloudinary.com/dhuy2dkhc/image/upload/v1634407010/libraryImages/<%= book[1] %>.jpg">
                                 <p><%= book[2]%></p>
                             </div>
                             <% }) %>

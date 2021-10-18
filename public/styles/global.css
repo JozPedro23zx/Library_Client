@@ -96,14 +96,14 @@ header .userIcon .profileIcon{
     padding: 3rem 3rem 3rem 3rem;
     border-radius: 3rem;
 
-    background: url('/images/profileIcon.png') no-repeat top/contain #ff8000;
+    background: url('https://res.cloudinary.com/dhuy2dkhc/image/upload/v1634407010/libraryImages/profileIcon.png') no-repeat top/contain #ff8000;
 }
 
 header .userIcon .loginIcon{
     padding: 3rem 3rem 3rem 3rem;
     border-radius: 3rem;
 
-    background: url('/images/loginIcon.png') no-repeat center/80% #ff8000;
+    background: url('https://res.cloudinary.com/dhuy2dkhc/image/upload/v1634407010/libraryImages/loginIcon.png') no-repeat center/80% #ff8000;
     
 }
 

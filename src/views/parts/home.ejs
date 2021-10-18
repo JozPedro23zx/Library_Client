@@ -1,6 +1,6 @@
     <main>
         <section id="banner">
-            <img src="public/images/banner.jpg" alt="Banner">
+            <img src="https://res.cloudinary.com/dhuy2dkhc/image/upload/v1634406983/libraryImages/banner_ctwnvn.jpg" alt="Banner">
             <div class="bannerMessage">
                 <h1>Bem vindo à Biblioteca Regional!</h1>
                 <p>Você pode encontrar todos os livros que deseja ler aqui. Ajude-nos também doando livros que você não usa mais, a contribuição de todos é necessária. </p>
@@ -13,7 +13,7 @@
                 <% if(sortedCollection){ %>
                     <% bookInfo.forEach(book =>{ %>
                     <div class="book">
-                        <a href="/book/<%= book.id%>"><img src="/Images/<%= book.cover %>.jpg"></a>
+                        <a href="/book/<%= book.id%>"><img src="https://res.cloudinary.com/dhuy2dkhc/image/upload/v1634407010/libraryImages/<%= book.cover %>.jpg"></a>
                         <p><%= book.title %></p>
                     </div>
                     <% }) %>
@@ -29,7 +29,7 @@
                 <% sortedCollection.forEach(collection =>{ %>
                     <div class="saga">
                         <a href="getGroupBook/<%= collection.id %>">
-                            <div><img src="/Images/<%= collection.cover %>.jpg"></div>
+                            <div><img src="https://res.cloudinary.com/dhuy2dkhc/image/upload/v1634407010/libraryImages/<%= collection.cover %>.jpg"></div>
                             <p>Veja a coleção <br>completa de <br><%= collection.name %></p>
                         </a>
                     </div>
@@ -42,7 +42,7 @@
             
                 <div class="logo">
                     <h1>Entre em contato conosco</h1>
-                    <img src="/Images/logo.png">
+                    <img src="https://res.cloudinary.com/dhuy2dkhc/image/upload/v1634407002/libraryImages/logo_qzfvzx.png">
                 </div>
 
                 <div class="infos">
@@ -53,13 +53,13 @@
 
                 <div class="socialLink">
                     <a href="#">
-                        <img src="/Images/facebook.png">
+                        <img src="https://res.cloudinary.com/dhuy2dkhc/image/upload/v1634406984/libraryImages/facebook_tdgcyh.webp">
                     </a>
                     <a href="#">
-                        <img src="/Images/Instagram.png">
+                        <img src="https://res.cloudinary.com/dhuy2dkhc/image/upload/v1634406996/libraryImages/Instagram_cuk9bl.webp">
                     </a>
                     <a href="#">
-                        <img src="/Images/twitter.png">
+                        <img src="https://res.cloudinary.com/dhuy2dkhc/image/upload/v1634407010/libraryImages/twitter_nwnoai.png">
                     </a>
                 </div>
             

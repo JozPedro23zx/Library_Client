@@ -5,7 +5,7 @@
             <% } %>
             <div class="bookContent">
                 <div class="bookChosen">
-                    <img src="/Images/<%= bookInfo.cover %>.jpg">
+                    <img src="https://res.cloudinary.com/dhuy2dkhc/image/upload/v1634407010/libraryImages/<%= bookInfo.cover %>.jpg">
                     <p>Quantidade: <%= bookInfo.quantity %></p>
                     <div class="bookButtons">
                         <a href="/confirm/give/<%= bookInfo.id %>">Pegar</a>
@@ -37,7 +37,7 @@
                 <div class="listRecommended">
                     <% bookList.forEach(book => { %>
                     <div class="recommend">
-                        <a href="/book/<%= book.id %>"><img src="/Images/<%= book.cover %>.jpg"></a>
+                        <a href="/book/<%= book.id %>"><img src="https://res.cloudinary.com/dhuy2dkhc/image/upload/v1634407010/libraryImages/<%= book.cover %>.jpg"></a>
                     </div>
                     <% }) %>
                 </div>

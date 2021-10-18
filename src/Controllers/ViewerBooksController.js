@@ -6,7 +6,7 @@ class ViewerBooksController{
     async dataFromHomePage(req, res){
         let user = req.user || null
         let library = await selectLibraryLocation(user)
-        
+        console.log(library)
         try{
             let response = await fetch(`${process.env.API_HOST}/${library}/listBook`)
             let listBook = await response.json()

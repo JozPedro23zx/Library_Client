@@ -3,7 +3,7 @@
                 <div class="booksList">
                     <% list.forEach(book =>{ %>
                     <div class="book">
-                        <a href="/book/<%= book.id %>"><img src="/Images/<%= book.cover %>.jpg"></a>
+                        <a href="/book/<%= book.id %>"><img src="https://res.cloudinary.com/dhuy2dkhc/image/upload/v1634407010/libraryImages/<%= book.cover %>.jpg"></a>
                         <p><%= book.title %></p>
                     </div>
                     <% }) %>
