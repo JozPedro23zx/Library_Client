@@ -3,7 +3,7 @@ const fetch = require('node-fetch')
 
 class GetUserController{
 
-    async registerPage(){
+    async registerPage(req, res){
         let response = await fetch(`${process.env.API_HOST}/getAllLibraries`)
         let libraries = await response.json()
 
