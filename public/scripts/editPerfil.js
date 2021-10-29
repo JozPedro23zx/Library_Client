@@ -1,11 +1,14 @@
-import Modal from './modal.js'
-const modal = Modal()
+import Modal from './modal.js';
+import dotenv from 'dotenv';
 
-const sendChangesButton = document.querySelector('.sendButton')
+dotenv.config()
+const modal = Modal();
 
-sendChangesButton.addEventListener("click", screenModal)
+const sendChangesButton = document.querySelector('.sendButton');
+sendChangesButton.addEventListener("click", screenModal);
 
 function screenModal(){
+    console.log("click")
     event.preventDefault()
 
     let editForm = document.querySelector('#editProfile form')
