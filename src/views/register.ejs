@@ -38,10 +38,9 @@
                     
                     <select id="city" name="city">
                         <option value="Default">Selecione sua cidade</option>
-                        <option value="Juazeiro do Norte">Juazeiro do Norte</option>
-                        <option value="Barbalha">Barbalha</option>
-                        <option value="Milagres">Milagres</option>
-                        <option value="Missão Velha">Missão Velha</option>
+                        <% libraries.forEach(library =>{%>
+                            <option value="<%= library %>"><%= library %></option>
+                        <% }) %>
                     </select>
                     
                     <br>

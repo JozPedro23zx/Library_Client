@@ -16,7 +16,7 @@ route.get('/perfil/:id', forwardAuthenticated, GetUserController.dataUser)
 route.get('/confirm/:method/:idBook', forwardAuthenticated, GetUserController.registerBookOnHistoric)
 
 route.get('/login', (req, res)=>res.render("login", {mistake: req.flash('error')}))
-route.get('/register', (req, res)=>res.render("register", {mistake: req.flash("message")}))
+route.get('/register', GetUserController.registerPage)
 
 route.post('/loginAuthentication',
     passport.authenticate("local", {

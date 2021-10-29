@@ -2,6 +2,14 @@ const fetch = require('node-fetch')
 
 
 class GetUserController{
+
+    async registerPage(){
+        let response = await fetch(`${process.env.API_HOST}/getAllLibraries`)
+        let libraries = await response.json()
+
+        res.render("register", {libraries, mistake: req.flash("message")})
+    }
+
     async dataUser(req, res){
         let user = req.user || null
         let id = req.params.id

@@ -15,7 +15,7 @@ async function adminVerification(req, res, next){
             return next()
         }
     }
-    res.redirect('http://localhost:5000/')
+    res.redirect('/')
 }
 
 module.exports = admin
